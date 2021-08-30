@@ -3,9 +3,8 @@ package com.hackprotech.interviewquestions.string.palindrome;
 public class PalindromeSolution2 {
 
     public static boolean checkPalindromeOrNot(String str) {
-        char[] charArray = str.toCharArray();
-        for (int left = 0, right = charArray.length - 1; left < right; left++, right--) {
-            if (Character.toLowerCase(charArray[left]) != Character.toLowerCase(charArray[right])) {
+        for (int left = 0, right = str.length() - 1; left < right; left++, right--) {
+            if (Character.toLowerCase(str.charAt(left)) != Character.toLowerCase(str.charAt(right))) {
                 return false;
             }
         }
